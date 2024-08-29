@@ -49,13 +49,13 @@ button {
 .container {
     max-width: 320px;
     margin: 0 auto;
-    padding: 16px;
+    padding: 0 16px;
 }
 
 @media screen and (min-width:768px){
     .container {
         max-width:768px;
-        padding: 15px 0;
+        padding: 0 16px ;
     }
 }
 @media screen and (min-width:1158px){
@@ -67,7 +67,7 @@ button {
 }
 /* #region Wrapper */
 @media screen and (min-width:320px){
-/* #region Header 320px */
+    /* #region Header 320px */
     .nav-list,.header-info {
         display: none;
     }
@@ -75,6 +75,9 @@ button {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    .header-nav {
+        padding: 16px;
     }
     .logo {
         font-family: "Raleway", sans-serif;
@@ -231,7 +234,7 @@ button {
         border-radius: 4px;
         border: none;
         margin-top: 72px;
-        margin-bottom: 72px;
+        /* margin-bottom: 72px; */
         transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .section-btn:hover, .section-btn:focus {
@@ -240,13 +243,14 @@ button {
     /* #endregion 1 Section 320px */
     /* #region 2 Section 320px */
     .section-second {
-        margin-top: 96px;
-        margin-bottom: 96px;
+        padding: 96px 0;
     }
     .section-list {
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
     }
     .section-item {
-        margin-bottom: 72px;
         max-width: 288px;
     }
     .wrapper-icon {
@@ -351,8 +355,9 @@ button {
     /* #endregion 3 Section 320px */
     /* #region 4 Section */
 .section {
-    padding-top: 120px; 
-    padding-bottom: 120px;
+    /* padding-top: 120px; 
+    padding-bottom: 120px; */
+    padding: 96px 0;
 }
 .portfolio {
     font-weight: 700;
@@ -371,8 +376,8 @@ button {
     row-gap: 48px;
 }
 .portfolio-item {
-    width: 360px;
-    height: 420px;
+    /* width: 360px;
+    height: 420px; */
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover {
@@ -439,7 +444,8 @@ button {
 .container-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 72px;
+    flex-direction: column;
     align-items: baseline;
 }
 .wrapper-logo-footer{
@@ -467,7 +473,6 @@ button {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 288px;
-    margin-bottom: 72px;
     margin-top: 16px;
 }
 .wrapper-logo-icon {
@@ -494,7 +499,6 @@ button {
 }
 .wrapper-footer-subscribe {
     margin: 0 auto;
-    margin-top: 72px;
 }
 .subscribe-title {
     font-weight: 500;
@@ -508,6 +512,8 @@ button {
 .subscribe-form {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 24px;
 }
 .subscribe-label {
@@ -517,7 +523,7 @@ button {
 .subscribe-input {
     border: 1px solid #fff;
     border-radius: 4px;
-    width: 264px;
+    width: 288px;
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: #2e2f42;
@@ -765,9 +771,9 @@ button {
     .mobile-menu {
         display: none;
     }
-    .header_content {
+    /* .header_content {
         padding:16px;
-    }
+    } */
     .burger-btn {
         display: none;
     }
@@ -825,6 +831,8 @@ button {
         justify-content: center;
         flex-direction:column;
         gap: 12px;
+        margin-bottom: 14px;
+        margin-top: 14px;
     }
     .info-item_link {
         font-weight: 400;
@@ -855,20 +863,16 @@ button {
     /* #endregion 1 Section 768px */
 
     /* #region 2 Section 768px */
-    .section-second {
-        margin-top: 96px;
-        margin-bottom: 96px;
-    }
     .section-list {
         display: flex;
         align-items: center; 
         justify-content: center;
+        flex-direction: row;
         flex-wrap: wrap;
         gap: 24px;
     }
     .section-item {
-        margin-bottom: 72px;
-        max-width: 288px;
+        max-width: 356px;
     }
     .wrapper-icon {
         display: none;
@@ -897,10 +901,15 @@ button {
     }
 
     .container-wrapper {
+        flex-direction: row;
         justify-content: center;
+    
     }
     .subscribe-title {
         text-align: left;
+    }
+    .subscribe-form {
+        flex-direction: row;
     }
     /* #endregion Footer */
     .modal {
@@ -910,12 +919,16 @@ button {
 
 @media screen and (min-width:1158px){
     /* #region Header 1158px*/
+    .header-nav {
+        padding: 0;
+    }
     .header_content {
         padding:24px 0;
     }
     .info-list {
         flex-direction:row;
         gap: 40px;
+        margin: 0;
     }
     .info-item_link {
         font-size: 16px;
@@ -973,8 +986,8 @@ button {
     /* #endregion 2 Section 1158px */
 
     /* #region Footer */
-    .wrapper-logo-icon {
-        margin-left: 120px;
+    .container-wrapper {
+        gap: 80px;
     }
     /* #endregion Footer */
 
