@@ -61,7 +61,7 @@ button {
 @media screen and (min-width:1158px){
     .container {
         max-width:1158px;
-        padding: 15px 0;
+        padding: 0 15px;
         }
 
 }
@@ -497,9 +497,6 @@ button {
 .link-add-hover:hover, .link-add-hover:focus{
     background-color: #31d0aa;
 }
-.wrapper-footer-subscribe {
-    margin: 0 auto;
-}
 .subscribe-title {
     font-weight: 500;
     font-size: 16px;
@@ -884,10 +881,7 @@ button {
 
     /* #region 3 Section 768px */
     .team-list {
-        gap: 24px;
-    }
-    .team-list-item{
-        margin-bottom: 64px;
+        gap: 64px 24px;
     }
     /* #endregion 3 Section 768px */
     
@@ -902,7 +896,9 @@ button {
 
     .container-wrapper {
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-left:108px ;
+        gap: 72px 24px;
     
     }
     .subscribe-title {
@@ -911,12 +907,14 @@ button {
     .subscribe-form {
         flex-direction: row;
     }
+    .icon-social-info {
+        text-align: left;
+    }
     /* #endregion Footer */
     .modal {
         width: 408px;
     }
 }
-
 @media screen and (min-width:1158px){
     /* #region Header 1158px*/
     .header-nav {
@@ -937,6 +935,9 @@ button {
         color: #434455;
         padding: 24px 0;
     }
+    .logo{
+        margin-right: 76px;
+    }
     /* #endregion Header 1158px*/
     /* #region 1 Section 1158px */
         .section-one {
@@ -949,16 +950,11 @@ button {
     /* #endregion 1 Section 1158px */
 
     /* #region 2 Section 1158px */
-        .section-second {
-            margin-top: 96px;
-            margin-bottom: 96px;
-        }
         .section-list {
             flex-wrap: nowrap;
             gap: 24px;
         }
         .section-item {
-            margin-bottom: 120px;
             max-width: 264px;
         }
         .wrapper-icon {
@@ -984,15 +980,27 @@ button {
             font-weight: 400;
         }
     /* #endregion 2 Section 1158px */
+    /* #region 3 Section 1158px */
+    .section-third {
+        padding: 120px 0;
+    }
+    .team-list-item {
+        margin: 0;
+    }
+    /* #endregion 3 Section 1158px */
 
     /* #region Footer */
     .container-wrapper {
-        gap: 80px;
+        gap: 0;
+        padding-left: 15px;
+    }
+    .wrapper-logo-footer{
+        margin-right: 120px;
+    }
+    .wrapper-logo-icon {
+        margin-right: auto;
     }
     /* #endregion Footer */
-
-
-
 }
 
 
